@@ -1,0 +1,18 @@
+tt_content {
+   MaPHPIncludeSCRIPT < lib.fluidContent
+   MaPHPIncludeSCRIPT {
+      templateName = Show.html
+      dataProcessing {
+         1 = Vendor\MaPHPInclude\DataProcessing\ScriptProcessor
+         1 {
+            useHere = theConfigurationOfTheDataProcessor
+         }
+      }
+   }
+}
+
+lib.fluidContent {
+   templateRootPaths {
+      200 = EXT:MaPHPInclude/Resources/Private/Templates/MaPHPInclude
+   }
+}

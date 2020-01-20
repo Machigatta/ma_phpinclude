@@ -1,0 +1,20 @@
+{
+    "name": "machigatta/ma-php-phpinclude",
+    "authors": [
+        {
+           "name": "Machigatta",
+           "role": "Developer"
+        }
+    ],
+    "type": "typo3-cms-extension",
+    "description": "An extension to import PHP-Scripts.",
+    "license": "GPL-2.0-or-later",
+    "autoload": {
+        "psr-4": {
+           "Machigatta\\MaPHPInclude\\": "Classes/"
+        }
+    },
+    "require": {
+        "typo3/cms-core": ">=7.6 <8.0.0"
+    }
+}
