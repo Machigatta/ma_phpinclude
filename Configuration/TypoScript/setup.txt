@@ -1,18 +1,14 @@
 tt_content {
-   MaPHPIncludeSCRIPT < lib.fluidContent
-   MaPHPIncludeSCRIPT {
-      templateName = Show.html
-      dataProcessing {
-         1 = Vendor\MaPHPInclude\DataProcessing\ScriptProcessor
-         1 {
-            useHere = theConfigurationOfTheDataProcessor
-         }
-      }
-   }
-}
+	tx_ma_phpinclude =< lib.contentElement
+	tx_ma_phpinclude {
+		templateName = Show
+		file = EXT:tx_ma_phpinclude/Resources/Private/Templates/tx_ma_phpinclude/Show.html
+		variables {
+			settings < page.10.settings
+		}
 
-lib.fluidContent {
-   templateRootPaths {
-      200 = EXT:MaPHPInclude/Resources/Private/Templates/MaPHPInclude
-   }
+		dataProcessing {
+			10 = Machigatta\MaPHPInclude\Controller\DataProcessor\FlexFormProcessor
+		}
+	}
 }

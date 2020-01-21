@@ -1,34 +1,44 @@
 <?php
+defined('TYPO3_MODE') or die();
 
-// \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-//     'Machigatta.MaPHPInclude',
-//     'MaPHPInclude',
-//     '[Machigatta] PHP Script',
-//     'EXT:MaPHPInclude/Resources/Public/Icons/ext_icon.png'
-// );
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+   'tt_content',
+   'CType',
+    [
+        'LLL:EXT:tx_ma_phpinclude/Resources/Private/Language/locallang_db.xlf:extension.title',
+        'tx_ma_phpinclude',
+        'ma-php-include-icon',
+    ],
+    'textmedia',
+    'after'
+);
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
-    array(
-       'LLL:EXT:MaPHPInclude/Resources/Private/Language/Tca.xlf:MaPHPIncludeSCRIPT',
-       'MaPHPIncludeSCRIPT',
-       'ma-php-include-icon'
-    ),
-    'CType',
-    'MaPHPInclude'
- );
+ $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['txmaphpinclude_content'] = 'ma-php-include-icon';
 
- $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['MaPHPIncludeSCRIPT'] = 'ma-php-include-icon';
+ $pluginSignature = 'txmaphpinclude_content';
 
- $GLOBALS['TCA']['tt_content']['types']['MaPHPIncludeSCRIPT'] = array(
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'layout,select_key,recursive,pages';
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:tx_ma_phpinclude/Configuration/Flexforms/flexform.xml');
+
+$GLOBALS['TCA']['tt_content']['types']['tx_ma_phpinclude'] = [
     'showitem' => '
-          --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.general;general,
-          --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.header;header,
-       --div--;PHPScript,
-				bodytext;LLL:EXT:videoce/Resources/Private/Language/locallang_db.xlf:tx_ma_phpinclude_content_model.item_source_path,
-       --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:tabs.appearance,
-          --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.frames;frames,
-       --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:tabs.access,
-          --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.visibility;visibility,
-          --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.access;access,
-       --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:tabs.extended
- ');
+     --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
+    --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.header;header,bodytext,
+    --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.appearance,
+    --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.frames;frames,
+    --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.table_layout;tablelayout,
+    --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
+    --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.visibility;visibility,
+    --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.access;access,
+    --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.extended
+    ',
+    'columnsOverrides' => [
+        'bodytext' => [
+            'config' => [
+                'renderType' => 'input',
+                'format' => 'input',
+            ],
+        ],
+    ],
+];

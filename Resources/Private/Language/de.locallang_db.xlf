@@ -4,7 +4,7 @@
         <header/>
         <body>
             <trans-unit id="extension.title">
-                <source>Eingebundene PHPDatein</source>
+                <source>MaPHPInclude</source>
             </trans-unit>
             <trans-unit id="tx_ma_phpinclude_content_model">
                 <source>PHPDatei</source>

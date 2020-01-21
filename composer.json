@@ -1,5 +1,5 @@
 {
-    "name": "machigatta/ma-php-phpinclude",
+    "name": "machigatta/MaPHPInclude",
     "authors": [
         {
            "name": "Machigatta",
@@ -16,5 +16,11 @@
     },
     "require": {
         "typo3/cms-core": ">=7.6 <8.0.0"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "MaPHPInclude"
+        }
     }
+
 }

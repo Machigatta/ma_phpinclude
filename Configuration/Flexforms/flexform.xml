@@ -1,0 +1,24 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>0</langDisable>
+	</meta>
+	<sheets>
+		<sMain>
+			<ROOT>
+				<type>array</type>
+				<el>
+					<view.sourcePath>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:tx_ma_phpinclude/Resources/Private/Language/locallang_db.xlf:tx_ma_phpinclude_content_model.item_source_path</label>
+							<config>
+								<type>input</type>
+								<selectedListStyle>width:180px</selectedListStyle>
+							</config>
+						</TCEforms>
+					</view.sourcePath>
+				</el>
+			</ROOT>
+		</sMain>
+	</sheets>
+</T3DataStructure>

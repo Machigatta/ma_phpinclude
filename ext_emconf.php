@@ -1,7 +1,7 @@
 <?php
 
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'Ma - PHPInclude',
+    'title' => 'MaPHPInclude',
     'description' => 'An extension to import PHP-Scripts.',
     'category' => 'plugin',
     'author' => 'Armin Seidling',
@@ -9,10 +9,16 @@ $EM_CONF[$_EXTKEY] = [
     'author_email' => 'contact@machigatta.com',
     'state' => 'alpha',
     'clearCacheOnLoad' => true,
-    'version' => '0.0.1',
+    'version' => '1.0.0',
+    'autoload' => [
+        'psr-4' => [
+            'Machigatta\\MaPHPInclude\\' => 'Classes',
+        ]
+    ],
     'constraints' => [
         'depends' => [
-            'typo3' => '7.6.32',
+            'php' => '7.0.0-7.99.99',
+            'typo3' => '7.6.0-8.99.99',
         ],
     ],
 ];
