@@ -1,6 +1,6 @@
 lib.contentElement {
-    templateRootPaths.200 = EXT:tx_ma_phpinclude/Resources/Private/Templates/
-    partialRootPaths.200 = EXT:tx_ma_phpinclude/Resources/Private/Partials/
-    layoutRootPaths.200 = EXT:tx_ma_phpinclude/Resources/Private/Layout/
+    templateRootPaths.666 = EXT:tx_ma_phpinclude/Resources/Private/Templates/
+    partialRootPaths.666 = EXT:tx_ma_phpinclude/Resources/Private/Partials/
+    layoutRootPaths.666 = EXT:tx_ma_phpinclude/Resources/Private/Layout/
 
 }
