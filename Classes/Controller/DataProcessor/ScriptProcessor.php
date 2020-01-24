@@ -28,6 +28,7 @@ class ScriptProcessor implements DataProcessorInterface
         }
 
         ob_start();
+        $GLOBALS["TSFE"]->set_no_cache();
         include($link);
         $content = ob_get_contents();
         ob_end_clean();
