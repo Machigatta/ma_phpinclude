@@ -1,7 +1,7 @@
 tt_content {
-  tx_ma_phpinclude = FLUIDTEMPLATE
-  tx_ma_phpinclude {
-    file = EXT:tx_ma_phpinclude/Resources/Private/Templates/Show.html
+  ma_phpinclude = FLUIDTEMPLATE
+  ma_phpinclude {
+    file = EXT:ma_phpinclude/Resources/Private/Templates/Show.html
     variables {
       settings < page.10.settings
     }

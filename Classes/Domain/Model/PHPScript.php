@@ -12,7 +12,7 @@ class PHPScript extends AbstractEntity
     protected $scriptContent = '';
 
 
-    public function __construct(string $name = '', string $description = '', string $source_path = '/uploads/tx_ma_phpinclude/', string $scriptContent = ''): void
+    public function __construct(string $name = '', string $description = '', string $source_path = '/uploads/ma_phpinclude/', string $scriptContent = ''): void
     {
         $this->setName($name);
         $this->setDescription($description);

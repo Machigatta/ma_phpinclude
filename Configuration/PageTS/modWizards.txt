@@ -2,8 +2,8 @@ mod.wizards.newContentElement.wizardItems.plugins {
 	elements {
 		txmaphpinclude_content {
 			iconIdentifier = ma-php-include-icon
-			title = LLL:EXT:tx_ma_phpinclude/Resources/Private/Language/locallang_db.xlf:extension.title
-			description = LLL:EXT:tx_ma_phpinclude/Resources/Private/Language/locallang_db.xlf:extension.title
+			title = LLL:EXT:ma_phpinclude/Resources/Private/Language/locallang_db.xlf:extension.title
+			description = LLL:EXT:ma_phpinclude/Resources/Private/Language/locallang_db.xlf:extension.title
 			tt_content_defValues {
 				CType = list
 				list_type = txmaphpinclude_content

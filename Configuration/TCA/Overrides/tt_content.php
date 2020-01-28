@@ -5,8 +5,8 @@ defined('TYPO3_MODE') or die();
    'tt_content',
    'CType',
     [
-        'LLL:EXT:tx_ma_phpinclude/Resources/Private/Language/locallang_db.xlf:extension.title',
-        'tx_ma_phpinclude',
+        'LLL:EXT:ma_phpinclude/Resources/Private/Language/locallang_db.xlf:extension.title',
+        'ma_phpinclude',
         'ma-php-include-icon',
     ],
     'textmedia',
@@ -19,9 +19,9 @@ defined('TYPO3_MODE') or die();
 
 $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'layout,select_key,recursive,pages';
 $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:tx_ma_phpinclude/Configuration/Flexforms/flexform.xml');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:ma_phpinclude/Configuration/Flexforms/flexform.xml');
 
-$GLOBALS['TCA']['tt_content']['types']['tx_ma_phpinclude'] = [
+$GLOBALS['TCA']['tt_content']['types']['ma_phpinclude'] = [
     'showitem' => '
      --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.general;general,
     --palette--;LLL:EXT:cms/locallang_ttc.xlf:palette.header;header,bodytext,

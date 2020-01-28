@@ -3,7 +3,7 @@
 defined('TYPO3_MODE') || die('Access denied.');
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-    'Machigatta.tx_ma_phpinclude',
+    'Machigatta.ma_phpinclude',
     'PHPScriptList',
     [
     ],
@@ -29,7 +29,7 @@ $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
             $iconRegistry->registerIcon(
                 $identifier,
                 \TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
-                ['source' => 'EXT:tx_ma_phpinclude/Resources/Public/Icons/' . $path]
+                ['source' => 'EXT:ma_phpinclude/Resources/Public/Icons/' . $path]
             );
         }
     }

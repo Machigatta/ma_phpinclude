@@ -6,19 +6,19 @@
             <trans-unit id="extension.title">
                 <source>MaPHPInclude</source>
             </trans-unit>
-            <trans-unit id="tx_ma_phpinclude_content_model">
+            <trans-unit id="ma_phpinclude_content_model">
                 <source>PHPFile</source>
             </trans-unit>
-            <trans-unit id="tx_ma_phpinclude_content_model.item_label">
+            <trans-unit id="ma_phpinclude_content_model.item_label">
                 <source>Label</source>
             </trans-unit>
-            <trans-unit id="tx_ma_phpinclude_content_model.item_description">
+            <trans-unit id="ma_phpinclude_content_model.item_description">
                 <source>Description</source>
             </trans-unit>
-            <trans-unit id="tx_ma_phpinclude_content_model.item_source_path">
+            <trans-unit id="ma_phpinclude_content_model.item_source_path">
                 <source>File Source</source>
             </trans-unit>
-            <trans-unit id="tx_ma_phpinclude_content_model.item_script_content">
+            <trans-unit id="ma_phpinclude_content_model.item_script_content">
                 <source>File SourceCode</source>
             </trans-unit>
         </body>
