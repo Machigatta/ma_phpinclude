@@ -9,12 +9,13 @@ $EM_CONF[$_EXTKEY] = [
     'author_email' => 'contact@machigatta.com',
     'state' => 'stable',
     'clearCacheOnLoad' => true,
-    'version' => '1.0.1',
+    'version' => '2.0.0',
     'autoload' => [
         'psr-4' => [
             'Machigatta\\MaPHPInclude\\' => 'Classes',
         ]
     ],
+    'uploadfolder' => 'true',
     'constraints' => [
         'depends' => [
             'php' => '7.0.0-7.99.99',

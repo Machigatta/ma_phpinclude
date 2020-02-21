@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-02-02T02:02:02Z" product-name="ma_phpinclude">
+		<header/>
+		<body>
+			<trans-unit id="override.basepath">
+				<source>Path: If "Override" is checked on the ContentElement, this sourcePath is used as origin. An absolute path is required.</source>
+				<target>Pfad: Wenn "Überschreibung" im Contentelement ausgewählt ist, wird dieser Pfad als Basis für den Dateinamen benutzt. Hier wird ein Absoluter Pfad benötigt.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
